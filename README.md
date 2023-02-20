@@ -32,10 +32,11 @@ This is vivado factory demo project for ALINX board.
 * Extract the download ZIP to the new project folder.
 * For different development board, please open **\<archive extracted location\>/vivado/auto_create_project/project_info.tcl**
 Choose one devicePart and save.
->xczu2cg-sfvc784-1-e is for AXU2CG-E
->xczu3eg-sfvc784-1-e is for AXU3EG
->xczu4ev-sfvc784-1-i is for AXU4EV-E
->xczu5ev-sfvc784-2-i is for AXU5EV-E
+
+xczu2cg-sfvc784-1-e is for AXU2CG-E  
+xczu3eg-sfvc784-1-e is for AXU3EG  
+xczu4ev-sfvc784-1-i is for AXU4EV-E  
+xczu5ev-sfvc784-2-i is for AXU5EV-E  
 ```
 set devicePart "xczu2cg-sfvc784-1-e" 
 #set devicePart "xczu3eg-sfvc784-1-e"
@@ -56,7 +57,7 @@ source ./create_project.tcl
 ```
 
 ### Create Vivado Project using bat
-1. In "**auto_create_project**" folder, there is "**create_project.bat**", open it in edit mode, and change vivado software installation path with your own path. Save and close.
+1. In "**auto_create_project**" folder, there is "**create_project.bat**", open it in edit mode, and change to your own vivado software installation path. Save and close.
 ```
 CALL E:\XilinxVitis\Vivado\2020.1\bin\vivado.bat -mode batch -source create_project.tcl
 PAUSE
