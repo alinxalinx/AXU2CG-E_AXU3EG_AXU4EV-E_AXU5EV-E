@@ -145,11 +145,12 @@
   # Create instance: ddr4_0, and set properties
   set ddr4_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:ddr4:2.2 ddr4_0 ]
   set_property -dict [ list \
+   CONFIG.C0.DDR4_TimePeriod {938} \
    CONFIG.C0.BANK_GROUP_WIDTH {1} \
    CONFIG.C0.DDR4_AxiAddressWidth {30} \
    CONFIG.C0.DDR4_AxiDataWidth {128} \
    CONFIG.C0.DDR4_DataWidth {16} \
-   CONFIG.C0.DDR4_InputClockPeriod {5004} \
+   CONFIG.C0.DDR4_InputClockPeriod {5003} \
    CONFIG.C0.DDR4_MemoryPart {MT40A512M16HA-083E} \
    CONFIG.System_Clock {No_Buffer} \
  ] $ddr4_0
