@@ -5,9 +5,8 @@ ARGUMENT1="$1"
 TIMETOSET="2023-03-01 10:30:00"
 if [[ "$ARGUMENT1" == "" ]];then
 	echo -e "\e[1;33mYou can input the time you want to set in RTC as a parameter as follow:\e[0m"
-	echo -e "\e[1;34m./ds1308_test.sh '2023-03-01 10:30:00'\e[0m."
+	echo -e "\e[1;34m./ds1308_test.sh 2023-03-01 10:30:00\e[0m"
 	echo -e "\e[1;33mIf you do not enter parameter, the default setting time is '2023-03-01 10:30:00'\e[0m."
-	echo
 elif [[ ${#ARGUMENT1} -eq ${#TIMETOSET} ]] && [[ $ARGUMENT1 == *-*-*:*:* ]];then
 	TIMETOSET=$ARGUMENT1
 	echo -e "\e[1;33m$TIMETOSET will be set to rtc0(ds1308)\e[0m."

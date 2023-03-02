@@ -20,13 +20,13 @@ killall candump
 if [ "$CAN0_READ" == "  can0  5A1   [5]  11 22 33 44 55" ];then
 	echo -e "\e[1;32mCAN0 is OK\e[0m."
 else
-	echo -e "\e[1;31CAN0 is error\e[0m."
+	echo -e "\e[1;31mCAN0 is error\e[0m."
 fi
 #eth1
 if [ "$CAN1_READ" == "  can1  5A1   [5]  11 22 33 44 55" ];then
-        echo -e "\e[1;32CAN1 is OK\e[0m."
+        echo -e "\e[1;32mCAN1 is OK\e[0m."
 else
-        echo -e "\e[1;31CAN1 is error\e[0m."
+        echo -e "\e[1;31mCAN1 is error\e[0m."
 fi
 
 #remove tmp
