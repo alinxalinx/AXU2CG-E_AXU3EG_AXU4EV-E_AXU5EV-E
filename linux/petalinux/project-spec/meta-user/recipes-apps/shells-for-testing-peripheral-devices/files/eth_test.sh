@@ -58,6 +58,7 @@ do
 done
 route add default gw $GW eth0
 route add default gw $GW eth1
+sleep 2
 
 #check link speed
 ETH0_SPEED=`ethtool eth0 | grep Speed`

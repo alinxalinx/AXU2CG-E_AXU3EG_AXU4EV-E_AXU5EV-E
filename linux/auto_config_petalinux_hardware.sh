@@ -1,6 +1,5 @@
 #!/bin/sh
 
-
 echo -e "\e[1;33m1 : AXU2CG-E\e[0m"
 echo -e "\e[1;33m2 : AXU3EG\e[0m"
 echo -e "\e[1;33m3 : AXU4EV-E\e[0m"
