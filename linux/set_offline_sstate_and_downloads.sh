@@ -50,6 +50,9 @@ SSTATE_LINE=${SSTATE_LINE%%:*}
 sed -i "${SSTATE_LINE}s#.*#CONFIG_YOCTO_LOCAL_SSTATE_FEEDS_URL=\"${SSTATE_PATH_TOSET}\"#" ./petalinux/project-spec/configs/config
 sed -i "${DOWNLOADS_LINE}s#.*#CONFIG_PRE_MIRROR_URL=\"${DOWNLOADS_PATH_TOSET}\"#" ./petalinux/project-spec/configs/config
 
+cd ./petalinux
+petalinux-config --silentconfig
+echo -e "\e[1;32moffline package set over\e[0m."
 
 
 
