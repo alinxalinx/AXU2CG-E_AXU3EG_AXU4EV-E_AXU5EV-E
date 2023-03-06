@@ -70,7 +70,7 @@
 1. 把bsp文件拷贝到Ubuntu系统的文件夹中，以AXU4EV-E为例，如下图：\
 ![](./.images_for_README/12.png)
 2. 在当前路径中打开终端，设置petalinux的环境变量。\
-如果你的petalinux工具和我一样安装在 /opt/pkg/petalinux 路径，则使用下面命令来设置环境变量：
+如果你的petalinux工具和我一样安装在 /opt/pkg/petalinux 路径，则使用下面命令来设置环境变量：\
 `source /opt/pkg/petalinux/settings.sh`
 ![](./.images_for_README/13.png)
 3. 用下面的命令，通过petalinux的bsp包来创建petalinux工程：\
@@ -97,7 +97,7 @@ a. 名为**BOOT**的FAT类型的分区\
 b. 名为**ROOTFS**的Ext4类型的分区\
 c. Free Space\
 ![](./.images_for_README/19.png)\
-这也就是我们需要的状态，如果你的SD卡也是这样的状态(对分区的大小没有严格要求)，跳过这步骤[2]即可。但是为了演示一个完整的流程，我先把SD恢复成没有分过区的状态，选择对应的分区，点击\" **-** \"图标可以删除当前分区，最终变成如下图的状态：\
+这也就是我们需要的状态，如果你的SD卡也是这样的状态(对分区的大小没有严格要求)，跳过步骤[2]即可。但是为了演示一个完整的流程，我先把SD恢复成没有分过区的状态，选择对应的分区，点击\" **-** \"图标可以删除当前分区，最终变成如下图的状态：\
 ![](./.images_for_README/20.png)\
 点击\" **+** \"图标可以创建新的分区，第一个分区需要是**FAT**格式，大小分配2G，名字命名为**BOOT**：\
 ![](./.images_for_README/21.png)\
@@ -146,15 +146,14 @@ c. Free Space\
 ⑬EEPRM(图中不可见)\
 ⑭QSPI FLASH(图中不可见)\
 ⑮DS1308(图中不可见)\
-在前面制作的开发板上的Linux系统中，我们集成了一些脚本在 *~/shells_for_testing_peripheral_devices/* 路径中，用于测试这些接口：\
+在前面制作的开发板上的Linux系统中，我们集成了一些脚本在 *~/shells_for_testing_peripheral_devices/* 路径中，用于测试这些接口和外设：\
 ![](./.images_for_README/36.png)\
 接下来我们来看如何测试或使用这些接口和外设。
 ### ①DP
 把DP连接到显示器上，系统启动后可以看到Macthbox的桌面，这足以说明DP接口是完好的：\
 ![](./.images_for_README/37.png)
 ### ②PS_UART
-PS_UART用于Linux的终端窗口，把PS_UART连接到PC，用串口工具打开对应的COM，启动开发板后可以看到
-串口工具中打印信息，那么PS_UART就是完好的。
+PS_UART用于Linux的终端窗口，把PS_UART连接到PC，用串口工具打开对应的COM，启动开发板后可以看到串口工具中打印信息，那么PS_UART就是完好的。
 ### ③PL_UART
 把PL_UART连接到开发板的任意一个USB口上：\
 ![](./.images_for_README/38.png)\
@@ -185,7 +184,7 @@ PS_UART用于Linux的终端窗口，把PS_UART连接到PC，用串口工具打�
 ### ⑧M.2
 在开发板的M.2接口上接上SSD(请不要带电操作)：\
 ![](./.images_for_README/50.png)\
-然后启动开发板，运行 *~/shells_for_testing_peripheral_devices/* 中的 *m.2_ssd_test.sh* 脚本\
+然后启动开发板，运行 *~/shells_for_testing_peripheral_devices/* 中的 *m.2_ssd_test.sh* 脚本：\
 ![](./.images_for_README/51.png)\
 根据你的SSD的使用情况会用不同打印信息，但只要M.2接口和SSD是完好的最终肯定会输出" *ssd read write OK* "。
 ### ⑨PS_ETH、⑩PL_ETH
