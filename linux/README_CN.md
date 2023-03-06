@@ -67,7 +67,7 @@
 ![](./.images_for_README/11.png)
 
 ### 方法二：使用RELEASE版本中的BSP包创建PETALINUX工程
-1. 把bsp文件拷贝到Ubuntu系统的文件夹中，以AXUEV-E为例，如下图：
+1. 把bsp文件拷贝到Ubuntu系统的文件夹中，以AXU4EV-E为例，如下图：
 
 ---
 ## 在开发板上启动LINUX
