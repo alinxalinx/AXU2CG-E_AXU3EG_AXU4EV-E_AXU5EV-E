@@ -83,5 +83,6 @@
 如果你已经成功在开发板上启动了Linux，现在想知道开发板上有哪些接口以及如何使用，请参考[use_peripherals_interfaces.md](./documents_CN/use_peripherals_interfaces.md)
 ---
 ---
-- 访问[ALINX官方网站](https://www.alinx.com)以获取更多信息。
+- Visit [ALINX Official Website](https://www.alinx.com) for more information.\
+访问[ALINX官方网站](https://www.alinx.com)以获取更多信息。
 
