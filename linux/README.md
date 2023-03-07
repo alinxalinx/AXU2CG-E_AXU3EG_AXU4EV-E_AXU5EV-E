@@ -1,9 +1,7 @@
-# Run Linux on Series Development Boards : AXU2CG-E, AXU3EG, AXU4EV-E, AXU5EV-E
-# 在系列开发板：AXU2CG-E、AXU3EG、AXU4EV-E、AXU5EV-E上使用Linux
+# Run Linux on Series Development Boards : AXU2CG-E, AXU3EG, AXU4EV-E, AXU5EV-E / 在系列开发板：AXU2CG-E、AXU3EG、AXU4EV-E、AXU5EV-E上使用Linux
 ---
 ---
-## Content in this path
-## 本路径中的内容 
+## Content in this path / 本路径中的内容 
 	│
 	└─── linux
 		│
@@ -74,16 +72,15 @@
 			//本文档
 ---
 ---
-## Documentation Guidelines
-## 文档指引
+## Documentation Guidelines / 文档指引
 - If you want to quickly start a Linux on the development board, please refer to [make_sd_for_runnging_linux.md](./documents_EN/make_sd_for_runnging_linux.md)\
 如果你想快速在开发板上启动Linux，请参考[make_sd_for_runnging_linux.md](./documents_CN/make_sd_for_runnging_linux.md)
 
-- If you want to use Petalinux tool to configure the petalinux project we provide, please refer to [use_petalinux_to_make_linux.md](./documents_EN/use_petalinux_to_make_linux.md)
-- 如果你想用Petalinux工具来配置我们提供的petalinux工程，请参考[use_petalinux_to_make_linux.md](./documents_CN/use_petalinux_to_make_linux.md)
+- If you want to use Petalinux tool to configure the petalinux project we provide, please refer to [use_petalinux_to_make_linux.md](./documents_EN/use_petalinux_to_make_linux.md)\
+如果你想用Petalinux工具来配置我们提供的petalinux工程，请参考[use_petalinux_to_make_linux.md](./documents_CN/use_petalinux_to_make_linux.md)
 
-- If you have successfully started Linux on the development board, and now want to know what interfaces are on the development board and how to use them, please refer to [use_peripherals_interfaces.md](./documents_EN/use_peripherals_interfaces.md)
-- 如果你已经成功在开发板上启动了Linux，现在想知道开发板上有哪些接口以及如何使用，请参考[use_peripherals_interfaces.md](./documents_CN/use_peripherals_interfaces.md)
+- If you have successfully started Linux on the development board, and now want to know what interfaces are on the development board and how to use them, please refer to [use_peripherals_interfaces.md](./documents_EN/use_peripherals_interfaces.md)\
+如果你已经成功在开发板上启动了Linux，现在想知道开发板上有哪些接口以及如何使用，请参考[use_peripherals_interfaces.md](./documents_CN/use_peripherals_interfaces.md)
 ---
 ---
 - 访问[ALINX官方网站](https://www.alinx.com)以获取更多信息。
