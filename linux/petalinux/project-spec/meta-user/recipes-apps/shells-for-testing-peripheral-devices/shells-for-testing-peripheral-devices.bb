@@ -19,6 +19,7 @@ SRC_URI = "file://can_test.sh \
 	   file://qspi_flash_test.sh \
 	   file://rs485_test.sh \
 	   file://usb_drive_test.sh \
+	   file://pl_uart_to_self_usb_test.sh \
 	  "
 
 S = "${WORKDIR}"
@@ -38,4 +39,5 @@ do_install() {
 	     install -m 0755 ${S}/qspi_flash_test.sh ${D}/home/root/shells_for_testing_peripheral_devices
 	     install -m 0755 ${S}/rs485_test.sh ${D}/home/root/shells_for_testing_peripheral_devices
 	     install -m 0755 ${S}/usb_drive_test.sh ${D}/home/root/shells_for_testing_peripheral_devices
+	     install -m 0755 ${S}/pl_uart_to_self_usb_test.sh ${D}/home/root/shells_for_testing_peripheral_devices
 } 

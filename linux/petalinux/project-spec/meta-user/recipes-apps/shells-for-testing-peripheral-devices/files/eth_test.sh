@@ -8,8 +8,8 @@ else
 fi
 
 #disalbe ipv6
-sh -c 'echo 1 > /proc/sys/net/ipv6/conf/eth0/disable_ipv6'
-sh -c 'echo 1 > /proc/sys/net/ipv6/conf/eth1/disable_ipv6'
+#sh -c 'echo 1 > /proc/sys/net/ipv6/conf/eth0/disable_ipv6'
+#sh -c 'echo 1 > /proc/sys/net/ipv6/conf/eth1/disable_ipv6'
 
 #set auto eth1
 READLINE=`sed -n '19p' /etc/network/interfaces`
