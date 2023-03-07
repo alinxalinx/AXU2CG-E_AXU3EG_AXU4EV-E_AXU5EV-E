@@ -1,5 +1,4 @@
-# Run Linux on Series Development Boards : AXU2CG-E, AXU3EG, AXU4EV-E, AXU5EV-E
-在系列开发板：AXU2CG-E、AXU3EG、AXU4EV-E、AXU5EV-E上使用Linux
+# Run Linux on Series Development Boards : AXU2CG-E, AXU3EG, AXU4EV-E, AXU5EV-E / 在系列开发板：AXU2CG-E、AXU3EG、AXU4EV-E、AXU5EV-E上使用Linux
 ---
 ---
 ## Content in this path / 本路径中的内容 
