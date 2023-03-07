@@ -1,3 +1,4 @@
+[返回首页](../)
 ## 创建和使用PETALINUX工程
 - 关于XILINX开发套件的版本：**请务必使用2020.1版本的XILINX开发套件**，包括Vivado、Petalinux以及其他。
 - 关于**离线编译**：petalinux工程编译时会从网上获取大量的必要资源，编译速度也依赖于网速，如果网络不稳定还有可能在等待很久之后编译失败，总之有很多弊端。因此**强烈建议使用离线编译**，首先从AMD|XILINX官网下载离线编译所需要的离线资源包[sstate_aarch64_2020.1.tar.gz](https://xilinx-ax-dl.entitlenow.com/dl/ul/2020/06/01/R210329478/sstate_aarch64_2020.1.tar.gz?hash=EqeKX8hOtjjXirWfThN0NA&expires=1677753350&filename=sstate_aarch64_2020.1.tar.gz)、[downloads_2020.1.tar.gz](https://xilinx-ax-dl.entitlenow.com/dl/ul/2020/06/01/R210329480/downloads_2020.1.tar.gz?hash=zfojKvkf1j-MM0E3Ba9UkQ&expires=1677753365&filename=downloads_2020.1.tar.gz)到Ubuntu系统的文件夹中并解压（解压完成后可以删除压缩包）。如下图：\
@@ -5,6 +6,8 @@
 记录这两个包的路径，后面再介绍如何通过这两个路径来设置petalinux工程的离线编译。注意**加粗**的部分，：\
 /home/alinx/Downloads/petalinux_offline_pkg/sstate_aarch64_2020.1/**aarch64**
 **file://**/home/alinx/Downloads/petalinux_offline_pkg/downloads_2020.1/**downloads**
+
+---
 ### 方法一：使用本路径中的*PETALINUX工程文件夹*
 1. 把本路径中的所有文件拷贝到Ubuntu系统的文件夹中，如下图：\
 ![](../.images_for_documents/1.png)
@@ -31,6 +34,7 @@
 6. 查看petalinux工程 */image/linux* 路径，这里就是编译和打包的结果文件。我们需要其中的BOOT.bin、image.ub、boot.scr以及rootfs.tar.gz这四个文件，在开发板上启动LINUX：\
 ![](../.images_for_documents/11.png)
 
+---
 ### 方法二：使用RELEASE版本中的BSP包创建PETALINUX工程
 1. 把bsp文件拷贝到Ubuntu系统的文件夹中，以AXU4EV-E为例，如下图：\
 ![](../.images_for_documents/12.png)
@@ -49,3 +53,7 @@
 ![](../.images_for_documents/15.png)\
 编译和打包完成后，结果文件在petalinux工程的 */image/linux* 路径中：\
 ![](../.images_for_documents/11.png)
+
+---
+---
+- 访问[ALINX官方网站](https://www.alinx.com)以获取更多信息。
