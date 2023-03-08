@@ -3,7 +3,7 @@
 - 关于XILINX开发套件的版本：**请务必使用2020.1版本的XILINX开发套件**，包括Vivado、Petalinux以及其他。
 - 关于**离线编译**：petalinux工程编译时会从网上获取大量的必要资源，编译速度也依赖于网速，如果网络不稳定还有可能在等待很久之后编译失败，总之有很多弊端。因此**强烈建议使用离线编译**，首先从AMD|XILINX官网下载离线编译所需要的离线资源包[sstate_aarch64_2020.1.tar.gz](https://xilinx-ax-dl.entitlenow.com/dl/ul/2020/06/01/R210329478/sstate_aarch64_2020.1.tar.gz?hash=EqeKX8hOtjjXirWfThN0NA&expires=1677753350&filename=sstate_aarch64_2020.1.tar.gz)、[downloads_2020.1.tar.gz](https://xilinx-ax-dl.entitlenow.com/dl/ul/2020/06/01/R210329480/downloads_2020.1.tar.gz?hash=zfojKvkf1j-MM0E3Ba9UkQ&expires=1677753365&filename=downloads_2020.1.tar.gz)到Ubuntu系统的文件夹中并解压（解压完成后可以删除压缩包）。如下图：\
 ![](../.images_for_documents/3.png)\
-记录这两个包的路径，后面再介绍如何通过这两个路径来设置petalinux工程的离线编译。注意**加粗**的部分，：\
+记录这两个包的路径，后面再介绍如何通过这两个路径来设置petalinux工程的离线编译。注意**加粗**的部分：\
 /home/alinx/Downloads/petalinux_offline_pkg/sstate_aarch64_2020.1/**aarch64**
 **file://**/home/alinx/Downloads/petalinux_offline_pkg/downloads_2020.1/**downloads**
 

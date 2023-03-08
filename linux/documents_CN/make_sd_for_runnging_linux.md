@@ -46,7 +46,7 @@ SD卡分区完成后，把启动系统需要的文件拷贝到对应分区。\
 把刚才制作的SD卡插到开发板的SD卡槽中：\
 ![](../.images_for_documents/30.png)\
 连接PS_UART到PC(***PC上需要安装CP210x的驱动***)：\
-![](../.images_for_documents/31.png)
+![](../.images_for_documents/31.png)\
 打开串口工具，选择我们刚才连接的COM口，波特率设置为115200，关闭流控制，点击OK按钮：\
 ![](../.images_for_documents/32.png)\
 连接12V电源：\

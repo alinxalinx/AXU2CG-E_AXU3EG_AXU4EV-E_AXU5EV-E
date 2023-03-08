@@ -104,7 +104,7 @@ SocketCAN是一个开源的Linux内核模块，它提供了CAN总线的协议栈
 #### 5.2在Linux中使用CAN
 使用`ifconfig -a`命令可以看到开发板上有两路can即*can0* 和*can1* ：\
 ![](../.images_for_documents/66.png)\
-使用这条命令来设置can0的bitrate并启动can0\
+使用这条命令来设置can0的bitrate并启动can0：\
 `ip link set can0 up type can bitrate 1000000`\
 使用这条命令可以接收can0收到的数据：\
 `candump can0`\
@@ -149,16 +149,16 @@ media-ctl -V '"80010000.v_proc_ss":1 [fmt:UYVY8_1X16/1920x1080 field:none]'
 #### 6.3使用系统内置的脚本测试MIPI
 连接显示器到DP口，连接MIPI摄像头到MIPI口，运行 *~/shells_for_testing_peripheral_devices/* 中的 *mipi_test.sh* 脚本(*ps：按**ctrl+c**组合键退出该脚本。*)：\
 ![](../.images_for_documents/47.png)\
-显示其中显示摄像头图像：\
+显示器中显示摄像头图像：\
 ![](../.images_for_documents/46.png)
 
 ---
 ### ⑦LEDS、KEYS
 #### 7.1开发板上的LEDs和KEYs
-开发板上有三组LED和KEY。第一组是POWER指示灯和RESET按钮，第二组是PS端的LED和KEY，第三组是PL端的LED和KEY。上电后默认POWER和PL_LED点亮：\
+开发板上有三组LED和KEY。第一组是POWER指示灯和RESET按钮，第二组是PS端的LED和KEY，第三组是PL端的LED和KEY。上电后默认POWER和PS_LED点亮：\
 ![](../.images_for_documents/48.png)
 #### 7.2在Linux中使用LEDs和KEYs
-使用LEDs和KEYs实际上就是配置和使用GPIO，在Linux中只需要知道GPIO号就可以使用对应的IO口。PS_LED的GPIO号为373，PS_KEY的GPIO号为359，PL_LED的GPIO号为509，PL_KEY的GPIO号为510。
+使用LEDs和KEYs实际上就是配置和使用GPIO，在Linux中只需要知道GPIO号就可以使用对应的IO口。PS_LED的GPIO号为373，PS_KEY的GPIO号为359，PL_LED的GPIO号为509，PL_KEY的GPIO号为510。\
 LED对应的IO需要配置成输出，以PS_LED为例，使用GPIO输出的步骤如下：
 ```
 #导出对应的端口
@@ -226,8 +226,8 @@ mount /dev/nvme0n1p1 /run/media/nvme0n1p1
 ### ⑨PS_ETH
 #### 9.1什么是ETH
 在Linux操作系统中，\"ETH\" 通常指的是网络接口设备，它是用于在计算机与网络之间进行通信的硬件设备。在Linux中，可以使用 *ifconfig* 命令来管理和配置网络接口设备。可以通过ETH接口把开发板和其他网络设备连接在同一网络中，以便进行数据传输。\
-在以太网协议中，每个设备都被分配一个唯一的MAC地址，以便在网络中进行识别和通信。当计算机通过网络接口设备发送数据时，它们将被封装在以太网帧中，并使用MAC地址进行路由和传输。
-开发板上的PS_ETH是PS端的ETH，PS_ETH则是PL端用IP实现的ETH，但是在系统中他们的使用方法都是一样的
+在以太网协议中，每个设备都被分配一个唯一的MAC地址，以便在网络中进行识别和通信。当计算机通过网络接口设备发送数据时，它们将被封装在以太网帧中，并使用MAC地址进行路由和传输。\
+开发板上的PS_ETH是PS端的ETH，PS_ETH则是PL端用IP实现的ETH，但是在系统中他们的使用方法都是一样的。
 #### 9.2在Linux中使用ETH
 连接PS_ETH和PL_ETH(比如通过路由器或交换机)到局域网：\
 ![](../.images_for_documents/52.png)\
@@ -251,7 +251,7 @@ route
 `ping -c 1 -I eth1 www.baidu.com`\
 ![](../.images_for_documents/71.png)
 #### 9.3使用系统内置的脚本设置并测试ETH
-运行 *~/shells_for_testing_peripheral_devices/* 中的 *m.2_ssd_test.sh* 脚本，这个脚本后可以带一个参数，即你想ping的地址，比如这里我ping了一下百度，如果不加参数则默认ping *www.google.com* ：\
+运行 *~/shells_for_testing_peripheral_devices/* 中的 *eth_test.sh* 脚本，这个脚本后可以带一个参数，即你想ping的地址，比如这里我ping了一下百度，如果不加参数则默认ping *www.google.com* ：\
 ![](../.images_for_documents/53.png)\
 最后会显示ping的结果和网口link的速度。
 
@@ -311,10 +311,10 @@ EEPROM是一种非易失性存储器（NVM），它是电可擦可编程只读�
 EEPROM通常用于存储小量的数据，例如芯片上的配置信息、产品序列号、加密密钥等。在一些电子设备中，EEPROM还可以用来存储用户设置和个人资料等数据。\
 与闪存相比，EEPROM具有更快的读取速度和更高的耐用性，但容量较小。与DRAM相比，EEPROM具有更长的数据保持时间，但写入速度较慢。
 #### 13.2在Linux系统上使用EEPROM
-eeprom在系统中的操作文件是 */sys/bus/i2c/devices/1-0050/eeprom* 。
+eeprom在系统中的操作文件是 */sys/bus/i2c/devices/1-0050/eeprom* 。\
 使用命令：\
 `echo -e "test e2prom\n" > /sys/bus/i2c/devices/1-0050/eeprom`\
-可以往eeprom中写入引号中的数据。
+可以往eeprom中写入引号中的数据。\
 使用命令：\
 `cat /sys/bus/i2c/devices/1-0050/eeprom`\
 可以查看eeprom中的内容。\
@@ -330,8 +330,8 @@ Flash是一种高速闪存存储器，常用于嵌入式系统和其他应用中
 QSPI Flash是一种基于SPI接口的闪存芯片，它通过四个并行数据线（quad interface）进行通信，与传统的SPI Flash相比，可以实现更快的数据传输速度，通常达到几十MHz的传输速度。QSPI Flash的容量通常在几兆字节到几十兆字节之间。\
 QSPI Flash具有许多优点，包括快速读写速度、低功耗、可擦写性、易于集成和使用等。此外，它还可以通过软件进行编程和擦除，而无需任何外部设备或信号线。
 #### 14.2在Linux系统上使用QSPI FLASH
-在当前的Linux系统中QSPI FLASH被用于存储u-boot的环境变量，如果修改了u-boot的环境变量那么操作QSPI FLASH就需要小心了。
-QSPI FLASH在系统中的操作文件是 */dev/mtd0*。
+在当前的Linux系统中QSPI FLASH被用于存储u-boot的环境变量，如果修改了u-boot的环境变量那么操作QSPI FLASH就需要小心了。\
+QSPI FLASH在系统中的操作文件是 */dev/mtd0*。\
 FLASH设备在写之前需要先擦，使用下面的命令可以擦除QSPI FLASH的第一个扇区：\
 `flash_erase /dev/mtd0 0 1`\
 */dev/mtd0* 是块设备，可以用**dd**命令来读写文件到 */dev/mtd0*。\
