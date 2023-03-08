@@ -1,4 +1,4 @@
-[返回首页](../)
+[Back to Home](../)
 ## Start the linux on the development board from the SD card
 
 ---
