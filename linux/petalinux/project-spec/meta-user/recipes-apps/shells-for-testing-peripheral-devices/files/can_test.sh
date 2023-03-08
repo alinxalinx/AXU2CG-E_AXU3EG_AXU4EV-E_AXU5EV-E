@@ -16,13 +16,13 @@ CAN1_READ=`cat /home/root/.can1_tmp | head -n 1`
 killall candump
 
 #check receive and send result
-#eth0
+#can0
 if [ "$CAN0_READ" == "  can0  5A1   [5]  11 22 33 44 55" ];then
 	echo -e "\e[1;32mCAN0 is OK\e[0m."
 else
 	echo -e "\e[1;31mCAN0 is error\e[0m."
 fi
-#eth1
+#can1
 if [ "$CAN1_READ" == "  can1  5A1   [5]  11 22 33 44 55" ];then
         echo -e "\e[1;32mCAN1 is OK\e[0m."
 else
