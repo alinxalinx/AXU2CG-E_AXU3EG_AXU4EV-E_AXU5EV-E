@@ -11,7 +11,7 @@
 		│	│	│
 		│	│	└─ design_1_wrapper.xsa	
 		│	│
-		│	├── AXU3CG 
+		│	├── AXU3EG 
 		│	│	│
 		│	│	└─ design_1_wrapper.xsa	
 		│	│
