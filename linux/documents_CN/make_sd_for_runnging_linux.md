@@ -33,6 +33,7 @@ c. Free Space\
 ---
 ### 3.填充SD卡分区
 SD卡分区完成后，把启动系统需要的文件拷贝到对应分区。\
+ps：可以在release版本中找到*boot.scr* 、*BOOT.bin* 、*image.ub*、*rootfs.tar.gz* 等文件。也可以自己编译petalinux工程获取这些文件。  \
 把*boot.scr* 、*BOOT.bin* 、*image.ub* 三个文件拷贝到**BOOT**分区：\
 ![](../.images_for_documents/27.png)\
 把*rootfs.tar.gz* 用root权限解压到**ROOTFS**分区，在*rootfs.tar.gz* 所在路径打开终端，输入下面的命令：\
