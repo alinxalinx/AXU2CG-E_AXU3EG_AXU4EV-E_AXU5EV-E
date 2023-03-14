@@ -15,18 +15,18 @@
 如果你的petalinux工具和我一样安装在 */opt/pkg/petalinux* 路径，则使用下面命令来设置环境变量：\
 `source /opt/pkg/petalinux/settings.sh`\
 ![](../.images_for_documents/2.png)
-3. 如果你不需要或者不想使用离线编译，则可以跳过这一步。使用*set_offline_sstate_and_downloads.sh* 脚本设置离线编译：\
+3. 使用*hardware* 路径中的硬件描述文件来配置petalinux工程的硬件信息，可以使用*auto_config_petalinux_hardware.sh* 脚本来完成设置，如下图：\
+![](../.images_for_documents/4.png)\
+根据提示完成操作，选择你的开发板型号，我以AXU2CG-E为例：\
+![](../.images_for_documents/5.png)
+4. 如果你不需要或者不想使用离线编译，则可以跳过这一步。使用*set_offline_sstate_and_downloads.sh* 脚本设置离线编译：\
 ![](../.images_for_documents/6.png)\
 输入1设置离线编译，输入2恢复成在线编译，输入其他任意值退出脚本，这里我选择1。因为我的sstate资源包路径和默认的设置相同，所以直接按回车就可以了。如果你的sstate资源包路径和默认的路径不同，则需要在这里输入你的路径然后按回车：\
 ![](../.images_for_documents/7.png)\
 然后downloads资源包路径也是一样的设置。按回车等待提示*offline package set over*：\
 ![](../.images_for_documents/8.png)
-4. 使用*hardware*路径中的硬件描述文件来配置petalinux工程的硬件信息，可以使用*auto_config_petalinux_hardware.sh*脚本来完成设置，如下图：\
-![](../.images_for_documents/4.png)\
-根据提示完成操作，选择你的开发板型号，我以AXU2CG-E为例：\
-![](../.images_for_documents/5.png)
 5. 现在就可以编译petalinux工程了，在终端中输入下面的命令编译工程并在编译完成后打包BOOT.bin：\
-`petalinux-build && petalinux-package --boot --u-boot --fsbl --fpga --force`\
+`cd ./petalinux && petalinux-build && petalinux-package --boot --u-boot --fsbl --fpga --force`\
 即使是使用离线编译，每个工程的第一次编译都会花上较长的时间。耐心等待编译完成：\
 ![](../.images_for_documents/9.png)\
 编译成功!!!并且打包了BOOT.bin：\
@@ -45,7 +45,7 @@
 3. 用下面的命令，通过petalinux的bsp包来创建petalinux工程：\
 `petalinux-create -t project -n petalinux -s ./AXU4EV-E.bsp`\
 ![](../.images_for_documents/14.png)
-4. 如果需要配置离线编译，参考**方法一**的步骤 **[3]**。
+4. 如果需要配置离线编译，参考**方法一**的步骤 **[4]**。
 5. 使用bsp包创建的petalinux工程不需任何设置，进入petalinux工程路径\
 `cd ./petalinux/`\
 直接编译并打包BOOT.bin即可：\

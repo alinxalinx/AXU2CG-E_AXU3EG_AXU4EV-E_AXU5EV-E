@@ -30,7 +30,4 @@ fi
 cd ./petalinux
 petalinux-config --get-hw-description ../hardware/$BOARD_MODEL --silentconfig
 echo -e "\e[1;32m$BOARD_MODEL hardware set over\e[0m."
-echo -e 'Now you can use command:"\e[1;32mpetalinux-bulid\e[0m" to compile the petalinux project\e[0m.'
 
-echo -e "\e[1;33mEnter path $PWD\e[0m"
-exec bash

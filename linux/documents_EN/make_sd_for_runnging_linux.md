@@ -33,6 +33,7 @@ The final status is shown in the following figure. Note that you need to mount b
 ---
 ### 3.Populate SD card partitions
 After the partition of the SD card is completed, copy the files needed to start the system to the corresponding partition.\
+Ps: You can find *boot. scr*, *BOOT. bin*, *image. ub*, *rootfs. tar. gz*  in the release version. You can also compile the petalinux project to obtain these files.\
 Copy the *boot.scr*, *BOOT.bin*, and *image.ub* files to the **BOOT** partition:\
 ![](../.images_for_documents/27.png)\
 Extract *rootfs.tar.gz* to the **ROOTFS** partition with root privileges, open the terminal in the path of *rootfs.tar.gz*, and enter the following command:\
