@@ -16,7 +16,7 @@
 ⑩PL_ETH\
 ⑪USB x 4\
 ⑫EMMC(Not visible in the figure)\
-⑬EEPRM(Not visible in the figure)\
+⑬EEPROM(Not visible in the figure)\
 ⑭QSPI FLASH(Not visible in the figure)\
 ⑮DS1308(Not visible in the figure)\
 ⑯LM75(Not visible in the figure)\
@@ -51,7 +51,7 @@ You can see that the serial port has echo. But PS_UART is used for terminal cons
 ---
 ### ③PL_UART
 #### 3.1What isPL_UART
-PL_UART区别于PS_UART，是ZYNQMP芯片中FPGA端(也叫做PL端)的UART接口。
+PL_UART is different from PS_UART is the UART interface of the FPGA (also called PL) in the ZYNQMP chip.
 #### 3.2Using PL_UART in Linux
 Connect the PL_UART to the PC(***The driver of CP210x needs to be installed on the PC*** ).\
 ![](../.images_for_documents/60.png)\
@@ -223,9 +223,6 @@ Different information will be printed according to the usage of your SSD, but as
 ---
 ### ⑨PS_ETH
 #### 9.1What is ETH
-在Linux操作系统中，\"ETH\" 通常指的是网络接口设备，它是用于在计算机与网络之间进行通信的硬件设备。在Linux中，可以使用 *ifconfig* 命令来管理和配置网络接口设备。可以通过ETH接口把开发板和其他网络设备连接在同一网络中，以便进行数据传输。\
-在以太网协议中，每个设备都被分配一个唯一的MAC地址，以便在网络中进行识别和通信。当计算机通过网络接口设备发送数据时，它们将被封装在以太网帧中，并使用MAC地址进行路由和传输。
-开发板上的PS_ETH是PS端的ETH，PS_ETH则是PL端用IP实现的ETH，但是在系统中他们的使用方法都是一样的。
 In the Linux operating system, \"ETH\" usually refers to the network interface device, which is the hardware device used to communicate between the computer and the network. In Linux, you can use the *ifconfig* command to manage and configure network interface devices. The development board and other network devices can be connected in the same network through the ETH interface for data transmission.\
 In the Ethernet protocol, each device is assigned a unique MAC address for identification and communication in the network. When computers send data through network interface devices, they will be encapsulated in Ethernet frames and routed and transmitted using MAC addresses.\
 The PS_ETH on the development board is the ETH on the PS side, and the PS_ETH is the ETH on the PL side implemented by IP, but their use methods are the same in the system.
@@ -238,7 +235,6 @@ If your router or switch supports DHCP, both eth0 and eth1 will be automatically
 If no IP address is assigned, you need to use the following command to assign it manually, for example :\
 `ifconfig eth0 192.168.8.67`\
 The *ifconfig* command can also be used to set the subnet mask; If the MAC address needs to be modified, */etc/network/interfaces* needs to be modified; If you want to set the gateway, you need to use command **route**; If you need to modify DNS, you need to modify */etc/resolv.conf*. The relevant configuration will not be detailed, generally, as long as you connect to the LAN through the network cable, you can use eth0 directly after the system is powered on.\
-如果要使用eth1的话，还需要设置一下eth1的默认网关，网关的ip地址取决于你的局域网，**如果你的eth1和eth0接在同一个局域网的同一个网段则可以参考eth0的设置**，例如：
 If you want to use eth1, you need to set the default gateway of eth1. The address of the gateway depends on your LAN. If your eth1 and eth0 are connected to the same segment of the same LAN, you can refer to the settings of eth0, for example :
 ```
 #Use route to view the gateway of eth0 first
@@ -249,7 +245,6 @@ route add default gw 192.168.8.1 eth1
 route
 ```
 ![](../.images_for_documents/70.png)\
-可以使用**ping**命令来测试网络通断，通过 **-c** 参数设置ping的次数，通过 **-I** (大写的i)参数选择网口：\
 You can use the **ping** command to test the network connection and disconnection, set the number of pings through the **-c** parameter, and select the network interface through the **-I**(uppercase i) parameter :\
 `ping -c 1 -I eth1 www.baidu.com`\
 ![](../.images_for_documents/71.png)
@@ -308,7 +303,7 @@ Run the *emmc_test.sh* script in *~/shells_for_testing_peripheral_devices/*  :\
 ![](../.images_for_documents/55.png)
 
 ---
-### ⑬EEPRM
+### ⑬EEPROM
 #### 13.1What is EEPROM
 EEPROM is a non-volatile memory (NVM), which is an improved version of the electrically erasable programmable read-only memory (EPROM). EEPROM can be erased and programmed by electronic signals.\
 EEPROM is usually used to store a small amount of data, such as configuration information on the chip, product serial number, encryption key, etc. In some electronic devices, EEPROM can also be used to store user settings and personal data.\
