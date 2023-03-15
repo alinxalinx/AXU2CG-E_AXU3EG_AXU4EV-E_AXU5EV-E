@@ -16,7 +16,7 @@
 ⑩PL_ETH\
 ⑪USB x 4\
 ⑫EMMC(图中不可见)\
-⑬EEPRM(图中不可见)\
+⑬EEPROM(图中不可见)\
 ⑭QSPI FLASH(图中不可见)\
 ⑮DS1308(图中不可见)\
 ⑯LM75(图中不可见)\
@@ -305,7 +305,7 @@ mount /dev/mmcblk0p1 /media/sd-mmcblk0p1
 ![](../.images_for_documents/55.png)
 
 ---
-### ⑬EEPRM
+### ⑬EEPROM
 #### 13.1什么是EEPROM
 EEPROM是一种非易失性存储器（NVM），它是电可擦可编程只读存储器（EPROM）的改进版本。EEPROM可以通过电子信号进行擦除和编程。\
 EEPROM通常用于存储小量的数据，例如芯片上的配置信息、产品序列号、加密密钥等。在一些电子设备中，EEPROM还可以用来存储用户设置和个人资料等数据。\

@@ -16,7 +16,7 @@
 ⑩PL_ETH\
 ⑪USB x 4\
 ⑫EMMC(Not visible in the figure)\
-⑬EEPRM(Not visible in the figure)\
+⑬EEPROM(Not visible in the figure)\
 ⑭QSPI FLASH(Not visible in the figure)\
 ⑮DS1308(Not visible in the figure)\
 ⑯LM75(Not visible in the figure)\
@@ -308,7 +308,7 @@ Run the *emmc_test.sh* script in *~/shells_for_testing_peripheral_devices/*  :\
 ![](../.images_for_documents/55.png)
 
 ---
-### ⑬EEPRM
+### ⑬EEPROM
 #### 13.1What is EEPROM
 EEPROM is a non-volatile memory (NVM), which is an improved version of the electrically erasable programmable read-only memory (EPROM). EEPROM can be erased and programmed by electronic signals.\
 EEPROM is usually used to store a small amount of data, such as configuration information on the chip, product serial number, encryption key, etc. In some electronic devices, EEPROM can also be used to store user settings and personal data.\
