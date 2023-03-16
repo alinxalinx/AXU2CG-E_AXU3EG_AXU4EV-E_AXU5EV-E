@@ -9,12 +9,14 @@ sleep 1
 cat /dev/ttyPS3 >> /home/root/.ttyPS3_tmp &
 sleep 1
 echo -e "pl uart to self usb test 1" >> /dev/ttyUSB0
+sleep 1
 TTYPS3_DATA=`cat /home/root/.ttyPS3_tmp`
 killall cat
 
 cat /dev/ttyUSB0 >> /home/root/.ttyUSB0_tmp &
 sleep 1
 echo -e "pl uart to self usb test 2" >> /dev/ttyPS3
+sleep 1
 TTYUSB0_DATA=`cat /home/root/.ttyUSB0_tmp`
 killall cat
 
