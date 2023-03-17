@@ -31,6 +31,8 @@ There are two physical interfaces of DP interface, one is the standard DP interf
 #### 1.2Using DP in Linux
 Connect DP to the display, and you can see the desktop of Macthbox after the system is started :\
 ![](../.images_for_documents/37.png)
+
+---
 ### ②PS_UART
 #### 2.1What is PS_UART
 UART is a communication protocol, which is called "Universal Asynchronous Receiver/Transmitter". It is a serial communication protocol that can be used to transmit data between microcontrollers, sensors, computer peripheral devices, communication devices, etc.\
