@@ -68,7 +68,7 @@ We set it to 115200 corresponding to the setting of the serial port tool, and th
 ![](../.images_for_documents/63.png)\
 Then send some data in the serial port tool, and you can see that the system has received these data :\
 ![](../.images_for_documents/64.png)\
-Press *ctrl v* on the keyboard to exit the *cat /dev/ttyPS3* command, and then use the following command to send data \"*PL_UART test*\" to the PC through PL_UART. The serial port tool can receive data:\
+Press *ctrl c* on the keyboard to exit the *cat /dev/ttyPS3* command, and then use the following command to send data \"*PL_UART test*\" to the PC through PL_UART. The serial port tool can receive data:\
 `echo "PL_UART test" > /dev/ttyPS3`\
 ![](../.images_for_documents/65.png)
 #### 3.3Use the built-in script in Linux to test PL_UART

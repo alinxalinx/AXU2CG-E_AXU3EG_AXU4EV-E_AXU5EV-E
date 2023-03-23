@@ -67,7 +67,7 @@ PL_UART区别于PS_UART，是ZYNQMP芯片中FPGA端(也叫做PL端)的UART接口
 ![](../.images_for_documents/63.png)\
 在串口工具中发送一些数据，可以看到系统中收到了这些数据：\
 ![](../.images_for_documents/64.png)\
-在键盘上按*ctrl v*退出*cat /dev/ttyPS3*命令，然后用命令：\
+在键盘上按*ctrl c*退出*cat /dev/ttyPS3*命令，然后用命令：\
 `echo "PL_UART test" > /dev/ttyPS3`\
 通过PL_UART发送数据*PL_UART test* 到PC，PC上串口工具可以收到数据：\
 ![](../.images_for_documents/65.png)
