@@ -594,4 +594,4 @@ This chapter introduces how to develop programs on the PL side, including method
 
 .. image:: images/images_0/888.png
 
-*ZYNQ MPSoC Development Platform FPGA Tutorial* - `Alinx Official Website <http://www.alinx.com>`_
+*ZYNQ MPSoC Development Platform FPGA Tutorial* - `Alinx Official Website <https://www.alinx.com/en>`_

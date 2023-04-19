@@ -153,4 +153,4 @@ In addition, it should be noted that the bandwidth and sampling rate of some use
 
 .. image:: images/images_0/888.png
 
-*ZYNQ MPSoC Development Platform FPGA Tutorial* - `Alinx Official Website <http://www.alinx.com>`_
+*ZYNQ MPSoC Development Platform FPGA Tutorial* - `Alinx Official Website <https://www.alinx.com/en>`_
