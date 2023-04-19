@@ -72,37 +72,37 @@ Select the IP Sources page, and then double-click to open the clk_wiz_0.veo file
     :align: center
  
 7) Let's write a top-level design file to instantiate this PLL IP, and write the pll_test.v code as follows. Note that the reset of the PLL is active high, that is, it is always in the reset state when the high level is high, and the PLL will not work, which many novices will ignore. Here we bind rst_n to a button, and the button is a low-level reset, so it needs to be connected to the reset of the PLL in reverse.
- 
+:: 
+
  `timescale 1ns / 1ps
  module pll_test(
- input      sys_clk_p,            //system clock 200Mhz on board
- input      sys_clk_n,            //system clock 200Mhz on board
- input       rst_n,             //reset ,low active
- output      clk_out           //pll clock output 
- 
-     );
+ input      sys_clk_p,       //system clock 200Mhz on board
+ input      sys_clk_n,       //system clock 200Mhz on board
+ input       rst_n,          //reset ,low active
+ output      clk_out         //pll clock output 
+ );
      
  wire        locked;
      
  clk_wiz_0 clk_wiz_0_inst
         (
          // Clock out ports
-         .clk_out1(),     // output clk_out1
-         .clk_out2(),     // output clk_out2
-         .clk_out3(),     // output clk_out3
-         .clk_out4(clk_out),     // output clk_out4
+         .clk_out1(),               // output clk_out1
+         .clk_out2(),               // output clk_out2
+         .clk_out3(),               // output clk_out3
+         .clk_out4(clk_out),        // output clk_out4
          // Status and control signals
-         .reset(~rst_n), // input reset
-         .locked(locked),       // output locked
-        // Clock in ports
-         .clk_in1_p(sys_clk_p),    // input clk_in1_p
+         .reset(~rst_n),            // input reset
+         .locked(locked),           // output locked
+         // Clock in ports
+         .clk_in1_p(sys_clk_p),     // input clk_in1_p
          .clk_in1_n(sys_clk_n));    // input clk_in1_n
- 
+
  endmodule
 
 In the program, first instantiate clk_wiz_0, input the differential 200Mhz clock signal to clk_in1_p and clk_in1_n of clk_wiz_0, and assign the output of clk_out4 to clk_out.
 
-*Note: The purpose of instantiation is to call the instantiated module in the upper-level module to complete the code function. The format of the instantiation signal in Verilog is as follows: the module name must be consistent with the name of the module to be instantiated, such as clk_wiz_0 in the program , including module signal names must also be consistent, such as clk_in1, clk_out1, clk_out2..... The connection signal is the signal transmitted between the TOP program and the module, and the connection signals between modules cannot conflict with each other, otherwise compilation errors will occur. *
+* Note: The purpose of instantiation is to call the instantiated module in the upper-level module to complete the code function. The format of the instantiation signal in Verilog is as follows: the module name must be consistent with the name of the module to be instantiated, such as clk_wiz_0 in the program , including module signal names must also be consistent, such as clk_in1, clk_out1, clk_out2..... The connection signal is the signal transmitted between the TOP program and the module, and the connection signals between modules cannot conflict with each other, otherwise compilation errors will occur. *
 
 .. image:: images/images_5/10.png
     :align: center
