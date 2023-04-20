@@ -158,4 +158,76 @@ The grid_display module mainly completes the grid line superposition of the vide
 
 grid_display module port
 
-The wav_display display module mainly completes the superposition display of waveform data. The module contains a dual-port ram. The write port is written by the ADC acquisition module, and the read port is the display module.
+The wav_display display module mainly completes the superposition display of waveform data. The module contains a dual-port ram, the write port is written by the ADC acquisition module, and the read port is the display module. When the grid display area is valid, each line of display will read the AD data value stored in RAM, and compare it with the Y coordinate to determine whether to display the waveform or not.
+
+.. image:: images/images_17/image9.png
+    :align: center
+
+.. csv-table::
+   :header: "Signal Name", "Direction", "Width (bit)", "Description"
+   :widths: 20, 10, 10, 30
+
+
+   "pclk ",in ,1 ,"Pixel Clock"
+   "rst_n ",in ,1 ,"Asynchronous reset, low level reset"
+   "wave_color ",in ,24 ,"wave color, rgb"
+   "adc_clk ",in ,1 ,"ADC module clock"
+   "adc_buf_wr ",in ,1 ,"ADC data write enable"
+   "adc_buf_addr ",in ,12 ,"ADC data write address"
+   "adc_buf_data ",in ,8 ,"ADC data, unsigned number"
+   "i_hs ",in ,1 ,"Video Line Synchronization Input"
+   "i_vs ",in ,1 ,"Video field sync input"
+   "i_de ",in ,1 ,"Video data valid input"
+   "i_data ",in ,24 ,"Video data input"
+   "o_hs ",out ,1 ,"with grid video line synchronization output"
+   "o_vs ",out ,1 ,"Video field synchronization output with grid"
+   "o_de ",out ,1 ,"Video output with grid"
+   "o_data ",out ,24 ,"with grid video data output"
+
+wav_display module port
+
+The configuration of RAM is as follows:
+
+.. image:: images/images_17/image10.png
+    :align: center
+
+.. image:: images/images_17/image11.png
+    :align: center
+
+.. image:: images/images_17/image12.png
+    :align: center
+
+The timing_gen_xy module is a sub-module of other modules, which completes the coordinate generation of the video image, the x coordinate increases from left to right, and the y coordinate increases from top to bottom.
+
+.. csv-table::
+   :header: "Signal Name", "Direction", "Width (bit)", "Description"
+   :widths: 20, 10, 10, 30
+
+
+   "clk ",in ,1 ,"System clock"
+   "rst_n ",in ,1 ,"Asynchronous reset, low level reset"
+   "i_hs ",in ,1 ,"Video Line Synchronization Input"
+   "i_vs ",in ,1 ,"Video field sync input"
+   "i_de ",in ,1 ,"Video data valid input"
+   "i_data ",in ,24 ,"Video data input"
+   "o_hs ",out ,1 ,"Video line synchronization output"
+   "o_vs ",out ,1 ,"Video field sync output"
+   "o_de ",out ,1 ,"Video data valid output"
+   "o_data ",out ,24 ,"Video data output"
+   "x ",out ,12 ,"Coordinate x output"
+   "y ",out ,12 ,"Coordinate y output"
+
+timing_gen_xy module port
+
+17.3 Experimental phenomena
+============================================
+The connection circuit is as follows, insert the AN706 module, and connect the SMA to the waveform generator. In order to facilitate the observation of the display effect, the waveform generator sampling frequency setting range is 500Hz~10KHz, and the maximum voltage amplitude is 10V. The result is the effect diagram at the beginning of this chapter.
+
+.. image:: images/images_17/image13.png
+    :align: center
+
+Hardware Connection Diagram
+
+.. image:: images/images_0/888.png
+
+*ZYNQ MPSoC Development Platform FPGA Tutorial* - `Alinx Official Website <https://www.alinx.com/en>`_
