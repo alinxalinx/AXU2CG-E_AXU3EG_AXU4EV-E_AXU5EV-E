@@ -65,4 +65,4 @@ PAUSE
 2. Double click bat file in Windows environment
 
 
-For more information, please post on the [ALINX Website] (https://www.alinx.com/en).
+For more information, please post on the [ALINX Website](https://www.alinx.com/en).

@@ -65,4 +65,4 @@ PAUSE
 2. 在Windows下双击bat文件即可。
 
 
-更多信息, 请访问[ALINX网站] (https://www.alinx.com)
+更多信息, 请访问[ALINX网站](https://www.alinx.com)
