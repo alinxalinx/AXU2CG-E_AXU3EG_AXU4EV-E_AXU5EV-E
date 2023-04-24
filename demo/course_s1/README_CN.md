@@ -46,12 +46,15 @@
         │    └── images_20/                  # 第二十章教程所需的图片   
         │
         ├── Ultrascale_MPSoC_CN.rst          # 中文Ultrascale_MPSoC简介
+        ├── Ultrascale_MPSoC_EN.rst          # 英文Ultrascale_MPSoC文档
         ├── ...
         ├── 01_pl_led_CN.rst                 # 中文PL的led实验教程
+        ├── 01_pl_led_EN.rst                 # 英文PL的led实验教程
         ├── 02_pll_CN.rst
         ├── 03_ram_CN.rst  
         ├── ....     
-        └── 17_ad9767_CN.rst                 # 中文AD9767双通道正弦波产生实验教程
+        ├── 17_ad9767_CN.rst                 # 中文AD9767双通道正弦波产生实验教程
+        └── 17_ad9767_EN.rst                 # 英文AD9767双通道正弦波产生实验教程
  ```
 ## 开发环境
 * Vivado 2020.1
@@ -89,4 +92,4 @@ eg：使用AXU5EV-E开发板,创建`01_led_project`项目，打开文件夹中`l
 在AXU2CG-E_AXU3EG_AXU4EV-E_AXU5EV-E/demo/course_s1/Documents下的对应名称.rst文件
 
 
-如有任何技术问题, 欢迎进入[ALINX网站] (https://www.alinx.com)技术支持进行咨询！
+如有任何技术问题, 欢迎进入[ALINX网站](https://www.alinx.com) 技术支持进行咨询！
